@@ -1,4 +1,7 @@
 <?php
+if (!class_exists('WebPush')) {
+    require dirname(dirname(__FILE__)) . '/vendor/autoload.php';
+}
 
 class pushNotifications
 {

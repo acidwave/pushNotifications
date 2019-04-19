@@ -2,16 +2,14 @@
 <model package="pushnotifications" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="pushnotifications"
        version="1.1">
 
-    <object class="pushNotificationsItem" table="pushnotifications_items" extends="xPDOSimpleObject">
-        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
-        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
-        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+    <object class="pushNotificationsItem" table="push_subscription" extends="xPDOSimpleObject">
+        <field key="endpoint" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="publicKey" dbtype="varchar" precision="100" phptype="string" null="true" default=""/>
+        <field key="authToken" dbtype="varchar" precision="32" phptype="string" null="true" default=""/>
+        <field key="contentEncoding" dbtype="varchar" precision="20" phptype="string" null="true" default=""/>
 
-        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
-            <column key="name" length="" collation="A" null="false"/>
-        </index>
-        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
-            <column key="active" length="" collation="A" null="false"/>
+        <index alias="endpoint" name="endpoint" primary="false" unique="true" type="BTREE">
+            <column key="endpoint" length="" collation="A" null="false"/>
         </index>
     </object>
 

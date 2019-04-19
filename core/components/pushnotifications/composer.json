@@ -1,0 +1,14 @@
+{
+    "name": "acidwave/push",
+    "description": "push backend",
+    "require": {
+        "minishlink/web-push": "^5.2"
+    },
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Timur Akmalov",
+            "email": "me@acidwave.ru"
+        }
+    ]
+}
