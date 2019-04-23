@@ -1,4 +1,5 @@
 <?php
+define('MODX_CORE_PATH', '/home/acidwave/sites/acidwave.ru/www/core/');
 
 if (!defined('MODX_CORE_PATH')) {
     $path = dirname(__FILE__);
@@ -11,8 +12,8 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'pushNotifications',
     'name_lower' => 'pushnotifications',
-    'version' => '1.0.0',
-    'release' => 'pl',
+    'version' => '1.0.2',
+    'release' => 'beta',
     // Install package to site right after build
     'install' => false,
     // Which elements should be updated on package upgrade

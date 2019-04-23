@@ -1,8 +1,2 @@
 <?php
-
-/**
- * @package pushnotifications
- */
-class pushNotificationsItem extends xPDOSimpleObject
-{
-}
+class pushNotificationsItem extends xPDOSimpleObject {}

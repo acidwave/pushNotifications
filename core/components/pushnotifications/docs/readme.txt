@@ -1,7 +1,7 @@
 --------------------
 pushNotifications
 --------------------
-Author: John Doe <john@doe.com>
+Author: Timur Akmalov <me@acidwave.ru>
 --------------------
 
-A basic Extra for MODx Revolution.
+Push Notifications backend

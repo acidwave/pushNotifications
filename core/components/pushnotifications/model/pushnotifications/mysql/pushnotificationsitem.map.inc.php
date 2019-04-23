@@ -2,7 +2,7 @@
 $xpdo_meta_map['pushNotificationsItem']= array (
   'package' => 'pushnotifications',
   'version' => '1.1',
-  'table' => 'pushnotifications_items',
+  'table' => 'push_subscription',
   'extends' => 'xPDOSimpleObject',
   'tableMeta' => 
   array (
@@ -10,63 +10,57 @@ $xpdo_meta_map['pushNotificationsItem']= array (
   ),
   'fields' => 
   array (
-    'name' => '',
-    'description' => '',
-    'active' => 1,
+    'endpoint' => '',
+    'publicKey' => '',
+    'authToken' => '',
+    'contentEncoding' => '',
   ),
   'fieldMeta' => 
   array (
-    'name' => 
+    'endpoint' => 
     array (
       'dbtype' => 'varchar',
-      'precision' => '100',
+      'precision' => '255',
       'phptype' => 'string',
       'null' => false,
       'default' => '',
     ),
-    'description' => 
+    'publicKey' => 
     array (
-      'dbtype' => 'text',
+      'dbtype' => 'varchar',
+      'precision' => '100',
       'phptype' => 'string',
       'null' => true,
       'default' => '',
     ),
-    'active' => 
+    'authToken' => 
     array (
-      'dbtype' => 'tinyint',
-      'precision' => '1',
-      'phptype' => 'boolean',
+      'dbtype' => 'varchar',
+      'precision' => '32',
+      'phptype' => 'string',
       'null' => true,
-      'default' => 1,
+      'default' => '',
+    ),
+    'contentEncoding' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '20',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
     ),
   ),
   'indexes' => 
   array (
-    'name' => 
+    'endpoint' => 
     array (
-      'alias' => 'name',
+      'alias' => 'endpoint',
       'primary' => false,
-      'unique' => false,
+      'unique' => true,
       'type' => 'BTREE',
       'columns' => 
       array (
-        'name' => 
-        array (
-          'length' => '',
-          'collation' => 'A',
-          'null' => false,
-        ),
-      ),
-    ),
-    'active' => 
-    array (
-      'alias' => 'active',
-      'primary' => false,
-      'unique' => false,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'active' => 
+        'endpoint' => 
         array (
           'length' => '',
           'collation' => 'A',
