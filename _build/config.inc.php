@@ -12,7 +12,7 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'pushNotifications',
     'name_lower' => 'pushnotifications',
-    'version' => '1.0.2',
+    'version' => '1.0.3',
     'release' => 'beta',
     // Install package to site right after build
     'install' => false,
